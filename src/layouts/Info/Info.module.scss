@@ -1,0 +1,55 @@
+.container {
+  &.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  &_content {
+    margin-left: 23%;
+    margin-top: 5%;
+    background-color: #b900b9;
+    width: 50%;
+    height: 50vh;
+    border-radius: 10px;
+    &_info {
+      margin-left: 30%;
+      padding-top: 10%;
+      &_stat {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.stat {
+  font-family: "Protest Riot", sans-serif;
+  &_point {
+    display: flex;
+    gap: 3px;
+    &_row {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 20%;
+      height: fit-content;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    &_content {
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+}
+
+.back_arrow {
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+  &:hover {
+    transform: scale(0.99);
+  }
+}
