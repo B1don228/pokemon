@@ -64,7 +64,7 @@ const Body = () => {
       behavior: "smooth",
     });
   };
-  
+
   const nextPageHandler = () => {
     setPage((prev) => prev + 9);
     dispatch(searchActions.nextPage(9));
@@ -115,6 +115,15 @@ const Body = () => {
         )}
         <br />
         <div className={className("container_buttons", { disabled: isOpen })}>
+          {!(page === 0) && !isSearching && !notFound && (
+            <StyledButton
+              disabled={page === 0 || isLoading}
+              onClick={backPageHandler}
+            >
+              Back
+            </StyledButton>
+          )}
+          {"     "}
           {page / 20 <= (pokemons?.count! - 20) / 20 &&
             !notFound &&
             !isSearching && (
@@ -127,15 +136,6 @@ const Body = () => {
                 Next
               </StyledButton>
             )}
-          {"     "}
-          {!(page === 0) && !isSearching && !notFound && (
-            <StyledButton
-              disabled={page === 0 || isLoading}
-              onClick={backPageHandler}
-            >
-              Back
-            </StyledButton>
-          )}
         </div>
       </div>
     </div>

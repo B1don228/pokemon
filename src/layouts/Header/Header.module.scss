@@ -22,19 +22,19 @@
       display: flex;
       text-align: center;
       flex-direction: column;
-      color: #1f376f;
+      color: blueviolet;
       gap: 5px;
       font-family: "Anta", sans-serif;
       & input {
         border: none;
-        border: 4px solid #1f376f;
+        border: 4px solid #ff0080;
         color: #1f376f;
         text-align: center;
         width: 400px;
         height: 30px;
         border-radius: 10px;
         color: white;
-        background-color: gray;
+        background-color: blueviolet;
         &::placeholder {
           color: #1f376f;
         }

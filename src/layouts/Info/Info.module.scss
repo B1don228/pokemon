@@ -17,6 +17,9 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        & div {
+          color: beige;
+        }
       }
     }
   }
@@ -24,6 +27,7 @@
 
 .stat {
   font-family: "Protest Riot", sans-serif;
+  color: bisque;
   &_point {
     display: flex;
     gap: 3px;
